@@ -1,0 +1,13 @@
+﻿version: '3'
+services:
+  friendapi:
+    image: 127.0.0.1:5000/friendapi
+    hostname: "friendapi"
+    ports:
+      - "5013:80"
+    networks:
+      - microservicenetwork
+
+networks:
+  microservicenetwork:
+    external: true
